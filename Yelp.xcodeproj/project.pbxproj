@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F39B1641A8B36400043DF03 /* RestrauntTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39B1631A8B36400043DF03 /* RestrauntTableViewCell.swift */; };
+		3F39B16F1A8C0D5F0043DF03 /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1671A8C0D5F0043DF03 /* Ubuntu-B.ttf */; };
+		3F39B1701A8C0D5F0043DF03 /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1681A8C0D5F0043DF03 /* Ubuntu-BI.ttf */; };
+		3F39B1711A8C0D5F0043DF03 /* Ubuntu-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1691A8C0D5F0043DF03 /* Ubuntu-L.ttf */; };
+		3F39B1721A8C0D5F0043DF03 /* Ubuntu-LI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B16A1A8C0D5F0043DF03 /* Ubuntu-LI.ttf */; };
+		3F39B1731A8C0D5F0043DF03 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B16B1A8C0D5F0043DF03 /* Ubuntu-M.ttf */; };
+		3F39B1741A8C0D5F0043DF03 /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B16C1A8C0D5F0043DF03 /* Ubuntu-MI.ttf */; };
+		3F39B1751A8C0D5F0043DF03 /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B16D1A8C0D5F0043DF03 /* Ubuntu-R.ttf */; };
+		3F39B1761A8C0D5F0043DF03 /* Ubuntu-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B16E1A8C0D5F0043DF03 /* Ubuntu-RI.ttf */; };
+		3F39B1811A8C0D7A0043DF03 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1771A8C0D7A0043DF03 /* Lato-Black.ttf */; };
+		3F39B1821A8C0D7A0043DF03 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1781A8C0D7A0043DF03 /* Lato-BlackItalic.ttf */; };
+		3F39B1831A8C0D7A0043DF03 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1791A8C0D7A0043DF03 /* Lato-Bold.ttf */; };
+		3F39B1841A8C0D7A0043DF03 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17A1A8C0D7A0043DF03 /* Lato-BoldItalic.ttf */; };
+		3F39B1851A8C0D7A0043DF03 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17B1A8C0D7A0043DF03 /* Lato-Hairline.ttf */; };
+		3F39B1861A8C0D7A0043DF03 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17C1A8C0D7A0043DF03 /* Lato-HairlineItalic.ttf */; };
+		3F39B1871A8C0D7A0043DF03 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17D1A8C0D7A0043DF03 /* Lato-Italic.ttf */; };
+		3F39B1881A8C0D7A0043DF03 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17E1A8C0D7A0043DF03 /* Lato-Light.ttf */; };
+		3F39B1891A8C0D7A0043DF03 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17F1A8C0D7A0043DF03 /* Lato-LightItalic.ttf */; };
+		3F39B18A1A8C0D7A0043DF03 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1801A8C0D7A0043DF03 /* Lato-Regular.ttf */; };
+		3F96A6631A8DCB8C00F88447 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96A6621A8DCB8C00F88447 /* FiltersViewController.swift */; };
 		3FCC72FC1A89DB3700611B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC72FB1A89DB3700611B4D /* AppDelegate.swift */; };
 		3FCC72FE1A89DB3700611B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC72FD1A89DB3700611B4D /* ViewController.swift */; };
 		3FCC73011A89DB3700611B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCC72FF1A89DB3700611B4D /* Main.storyboard */; };
@@ -30,6 +50,26 @@
 /* Begin PBXFileReference section */
 		129241868FFE5154278EDD55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D41458B38165618A255B3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3F39B1631A8B36400043DF03 /* RestrauntTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestrauntTableViewCell.swift; sourceTree = "<group>"; };
+		3F39B1671A8C0D5F0043DF03 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
+		3F39B1681A8C0D5F0043DF03 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
+		3F39B1691A8C0D5F0043DF03 /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
+		3F39B16A1A8C0D5F0043DF03 /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LI.ttf"; sourceTree = "<group>"; };
+		3F39B16B1A8C0D5F0043DF03 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
+		3F39B16C1A8C0D5F0043DF03 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
+		3F39B16D1A8C0D5F0043DF03 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
+		3F39B16E1A8C0D5F0043DF03 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
+		3F39B1771A8C0D7A0043DF03 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		3F39B1781A8C0D7A0043DF03 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3F39B1791A8C0D7A0043DF03 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		3F39B17A1A8C0D7A0043DF03 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3F39B17B1A8C0D7A0043DF03 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		3F39B17C1A8C0D7A0043DF03 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		3F39B17D1A8C0D7A0043DF03 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		3F39B17E1A8C0D7A0043DF03 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		3F39B17F1A8C0D7A0043DF03 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		3F39B1801A8C0D7A0043DF03 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		3F96A6621A8DCB8C00F88447 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		3FA45AEC1A89E507005B0674 /* Yelp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yelp-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FCC72F61A89DB3700611B4D /* Yelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCC72FA1A89DB3700611B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +113,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3F39B1651A8C0CAF0043DF03 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F39B1661A8C0CFA0043DF03 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3F39B1661A8C0CFA0043DF03 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F39B1771A8C0D7A0043DF03 /* Lato-Black.ttf */,
+				3F39B1781A8C0D7A0043DF03 /* Lato-BlackItalic.ttf */,
+				3F39B1791A8C0D7A0043DF03 /* Lato-Bold.ttf */,
+				3F39B17A1A8C0D7A0043DF03 /* Lato-BoldItalic.ttf */,
+				3F39B17B1A8C0D7A0043DF03 /* Lato-Hairline.ttf */,
+				3F39B17C1A8C0D7A0043DF03 /* Lato-HairlineItalic.ttf */,
+				3F39B17D1A8C0D7A0043DF03 /* Lato-Italic.ttf */,
+				3F39B17E1A8C0D7A0043DF03 /* Lato-Light.ttf */,
+				3F39B17F1A8C0D7A0043DF03 /* Lato-LightItalic.ttf */,
+				3F39B1801A8C0D7A0043DF03 /* Lato-Regular.ttf */,
+				3F39B1671A8C0D5F0043DF03 /* Ubuntu-B.ttf */,
+				3F39B1681A8C0D5F0043DF03 /* Ubuntu-BI.ttf */,
+				3F39B1691A8C0D5F0043DF03 /* Ubuntu-L.ttf */,
+				3F39B16A1A8C0D5F0043DF03 /* Ubuntu-LI.ttf */,
+				3F39B16B1A8C0D5F0043DF03 /* Ubuntu-M.ttf */,
+				3F39B16C1A8C0D5F0043DF03 /* Ubuntu-MI.ttf */,
+				3F39B16D1A8C0D5F0043DF03 /* Ubuntu-R.ttf */,
+				3F39B16E1A8C0D5F0043DF03 /* Ubuntu-RI.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		3FCC72ED1A89DB3700611B4D = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +175,7 @@
 				3FCC72FF1A89DB3700611B4D /* Main.storyboard */,
 				3FCC73021A89DB3700611B4D /* Images.xcassets */,
 				3FCC73041A89DB3700611B4D /* LaunchScreen.xib */,
+				3F39B1651A8C0CAF0043DF03 /* Resources */,
 				3FCC72F91A89DB3700611B4D /* Supporting Files */,
 				3FA45AEC1A89E507005B0674 /* Yelp-Bridging-Header.h */,
 			);
@@ -136,7 +210,9 @@
 		3FCC731B1A89E10B00611B4D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F39B1631A8B36400043DF03 /* RestrauntTableViewCell.swift */,
 				3FCC72FD1A89DB3700611B4D /* ViewController.swift */,
+				3F96A6621A8DCB8C00F88447 /* FiltersViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -239,8 +315,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F39B1711A8C0D5F0043DF03 /* Ubuntu-L.ttf in Resources */,
+				3F39B1881A8C0D7A0043DF03 /* Lato-Light.ttf in Resources */,
 				3FCC73011A89DB3700611B4D /* Main.storyboard in Resources */,
+				3F39B1721A8C0D5F0043DF03 /* Ubuntu-LI.ttf in Resources */,
+				3F39B18A1A8C0D7A0043DF03 /* Lato-Regular.ttf in Resources */,
+				3F39B1701A8C0D5F0043DF03 /* Ubuntu-BI.ttf in Resources */,
+				3F39B1811A8C0D7A0043DF03 /* Lato-Black.ttf in Resources */,
+				3F39B1821A8C0D7A0043DF03 /* Lato-BlackItalic.ttf in Resources */,
+				3F39B1851A8C0D7A0043DF03 /* Lato-Hairline.ttf in Resources */,
 				3FCC73061A89DB3700611B4D /* LaunchScreen.xib in Resources */,
+				3F39B1831A8C0D7A0043DF03 /* Lato-Bold.ttf in Resources */,
+				3F39B1731A8C0D5F0043DF03 /* Ubuntu-M.ttf in Resources */,
+				3F39B1891A8C0D7A0043DF03 /* Lato-LightItalic.ttf in Resources */,
+				3F39B1841A8C0D7A0043DF03 /* Lato-BoldItalic.ttf in Resources */,
+				3F39B1751A8C0D5F0043DF03 /* Ubuntu-R.ttf in Resources */,
+				3F39B1741A8C0D5F0043DF03 /* Ubuntu-MI.ttf in Resources */,
+				3F39B16F1A8C0D5F0043DF03 /* Ubuntu-B.ttf in Resources */,
+				3F39B1761A8C0D5F0043DF03 /* Ubuntu-RI.ttf in Resources */,
+				3F39B1861A8C0D7A0043DF03 /* Lato-HairlineItalic.ttf in Resources */,
+				3F39B1871A8C0D7A0043DF03 /* Lato-Italic.ttf in Resources */,
 				3FCC73031A89DB3700611B4D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +388,9 @@
 			files = (
 				3FCC72FE1A89DB3700611B4D /* ViewController.swift in Sources */,
 				3FCC731E1A89E28200611B4D /* YelpClient.swift in Sources */,
+				3F39B1641A8B36400043DF03 /* RestrauntTableViewCell.swift in Sources */,
 				3FCC72FC1A89DB3700611B4D /* AppDelegate.swift in Sources */,
+				3F96A6631A8DCB8C00F88447 /* FiltersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
