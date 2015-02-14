@@ -9,6 +9,7 @@
             <string>Ubuntu-Medium</string>
             <string>Ubuntu-Medium</string>
             <string>Ubuntu-Medium</string>
+            <string>Ubuntu-Medium</string>
         </mutableArray>
         <mutableArray key="Ubuntu-R.ttf">
             <string>Ubuntu</string>
@@ -38,8 +39,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QXp-wN-B5I" id="tQB-1u-vac">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Restraunt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFw-hL-ocv">
-                                                    <rect key="frame" x="81" y="8" width="65" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" misplaced="YES" text="Restraunt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFw-hL-ocv">
+                                                    <rect key="frame" x="81" y="8" width="201" height="16"/>
                                                     <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -90,6 +91,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="4R3-DU-aXB" firstAttribute="top" secondItem="tFw-hL-ocv" secondAttribute="bottom" constant="5" id="1vt-Tz-px1"/>
                                                 <constraint firstItem="y3r-6e-FAG" firstAttribute="leading" secondItem="cak-0h-PoU" secondAttribute="trailing" constant="8" id="81l-e7-TUw"/>
                                                 <constraint firstItem="cak-0h-PoU" firstAttribute="top" secondItem="tQB-1u-vac" secondAttribute="top" constant="8" id="BYg-kl-sJ8"/>
                                                 <constraint firstAttribute="trailing" secondItem="wpM-Kb-3B2" secondAttribute="trailing" constant="8" id="EcL-nw-vk4"/>
@@ -103,7 +105,6 @@
                                                 <constraint firstItem="tFw-hL-ocv" firstAttribute="top" secondItem="tQB-1u-vac" secondAttribute="top" constant="8" id="SPQ-C2-zZX"/>
                                                 <constraint firstAttribute="trailing" secondItem="y3r-6e-FAG" secondAttribute="trailing" constant="8" id="Wib-Re-JE0"/>
                                                 <constraint firstItem="y3r-6e-FAG" firstAttribute="top" secondItem="blQ-fG-HZd" secondAttribute="bottom" constant="1" id="ZdC-Ia-bzN"/>
-                                                <constraint firstItem="4R3-DU-aXB" firstAttribute="top" secondItem="tFw-hL-ocv" secondAttribute="bottom" constant="5" id="aCs-kI-JAM"/>
                                                 <constraint firstAttribute="trailing" secondItem="tfC-dL-3Xl" secondAttribute="trailing" constant="8" id="el3-9H-37r"/>
                                                 <constraint firstItem="wpM-Kb-3B2" firstAttribute="top" secondItem="UsV-ag-XFk" secondAttribute="bottom" constant="7.5" id="grt-El-LKc"/>
                                                 <constraint firstItem="tfC-dL-3Xl" firstAttribute="leading" secondItem="cak-0h-PoU" secondAttribute="trailing" constant="8" id="lOy-DO-SdC"/>
@@ -157,16 +158,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-mT-y3P">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-mT-y3P">
                                 <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCellId" id="DoR-TN-Trp">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filtersCellId" rowHeight="51" id="DoR-TN-Trp" customClass="FiltersTableViewCell" customModule="Yelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DoR-TN-Trp" id="pjA-Uh-0o5">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRm-Oq-AvV">
+                                                    <rect key="frame" x="8" y="15" width="208" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Id-Dg-D8l">
+                                                    <rect key="frame" x="263" y="10" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="filterLabel" destination="mRm-Oq-AvV" id="6Rs-gl-na2"/>
+                                            <outlet property="filterSwitch" destination="7Id-Dg-D8l" id="Myp-9d-OyQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -184,6 +200,9 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="filtersView" destination="7h8-mT-y3P" id="jl0-PR-I3H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5br-Eo-RJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,11 @@
 
 import UIKit
 
-class FiltersViewController: UIViewController {
+class FiltersViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var filtersView: UITableView!
+    
+    var filterSections = [("Category", ["Category"]), ("Sort", ["Best Match", "Distance", "Highest Rated"]), ("Radius", ["Meters"]), ("Deals", ["On/Off"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,7 @@ class FiltersViewController: UIViewController {
         titleLabel.sizeToFit()
         navigationItem.titleView = titleLabel
 
-        // Do any additional setup after loading the view.
+        self.filtersView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +33,21 @@ class FiltersViewController: UIViewController {
     
     @IBAction func cancelButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return filterSections.count
+    }
+    
+    func tableView(filtersView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filterSections[section].1.count
+    }
+    
+    func tableView(filtersView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = filtersView.dequeueReusableCellWithIdentifier("filtersCellId", forIndexPath: indexPath) as FiltersTableViewCell
+        let filtersInSection = filterSections[indexPath.section].1
+        cell.filterLabel.text = filtersInSection[indexPath.row]
+        return cell
     }
     
 
