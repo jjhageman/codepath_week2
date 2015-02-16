@@ -2,7 +2,7 @@
 
 This is a Yelp search app using the [Yelp API](http://developer.rottentomatoes.com/docs/read/JSON).
 
-Time spent: `<Number of hours spent>`
+Time spent: 15
 
 ### Features
 
@@ -30,8 +30,11 @@ Time spent: `<Number of hours spent>`
 - [ ] Implement the restaurant detail page.
 
 ### Walkthrough
+![Video Walkthrough](http://i.imgur.com/v9e4rUN.gif)
 
-![Video Walkthrough](...)
 
+### Creator
+
+- [Jeremy Hageman](http://github.com/jjhageman) ([@jjhageman](https://twitter.com/jjhageman))
 
 
