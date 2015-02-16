@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     @IBOutlet weak var restrauntView: UITableView!
     
     var client: YelpClient!
-    var restrauntData: [NSDictionary]?
     var restrauntArray: NSArray?
     
     let restrauntCellId = "restrauntCellId"
@@ -25,8 +24,11 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     
     var searchController: UISearchController!
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    var filters: Filters = Filters() {
+        didSet {
+            println("filters saved. Brunch? \(filters.categoriesBrunch)")
+//            updateSearch()
+        }
     }
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         restrauntView.dataSource = self
         restrauntView.estimatedRowHeight = 81.0
         restrauntView.rowHeight = UITableViewAutomaticDimension
-        performSearch("Thai")
+        performSearch("Thai", params: [:])
         
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -46,9 +48,55 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         searchController.hidesNavigationBarDuringPresentation = false
     }
     
+//    private func updateSearch() {
+//        autoRefreshLabel.text = filters.autoRefresh ? "Yes" : "No"
+//        playSoundsLabel.text = filters.playSounds ? "Yes" : "No"
+//        showPhotosLabel.text = filters.showPhotos ? "Yes" : "No"
+//    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func didChangeFilters(segue:UIStoryboardSegue) {
+        if let fVC = segue.sourceViewController as? FiltersViewController {
+            self.filters = fVC.filtersFromTableData()
+            
+            var categories = [String]()
+            if(self.filters.categoriesBrunch) {
+                categories.append("breakfast_brunch")
+            }
+            if(self.filters.categoriesIndian) {
+                categories.append("indpak")
+            }
+            if(self.filters.categoriesJapanese) {
+                categories.append("japanese")
+            }
+            if(self.filters.categoriesThai) {
+                categories.append("thai")
+            }
+            let category_filters:String = ",".join(categories)
+            
+            var sortBy = 0
+            if(self.filters.sortDistance) {
+                sortBy = 1
+            }
+            if(self.filters.sortRated) {
+                sortBy = 2
+            }
+            performSearch("Thai", params: ["category_filter": category_filters, "sort": String(sortBy)])
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showFiltersSegue" {
+            println("segueing")
+            // we wrapped our PreferencesTableViewController inside a UINavigationController
+            let navController = segue.destinationViewController as UINavigationController
+            let filtersVC = navController.topViewController as FiltersViewController
+            filtersVC.currentFilters = self.filters
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,6 +104,16 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         if let restraunt = restrauntArray?[indexPath.row] as? NSDictionary {
             let name = restraunt["name"] as NSString
             cell.restrauntNameLabel.text = "\(indexPath.row + 1). \(name)"
+            
+            if (cell.respondsToSelector(Selector("setPreservesSuperviewLayoutMargins:"))){
+                cell.preservesSuperviewLayoutMargins = false
+            }
+            if (cell.respondsToSelector(Selector("setSeparatorInset:"))){
+                cell.separatorInset = UIEdgeInsetsMake(0, 4, 0, 0)
+            }
+            if (cell.respondsToSelector(Selector("setLayoutMargins:"))){
+                cell.layoutMargins = UIEdgeInsetsZero
+            }
             
             if let reviewCount = restraunt["review_count"] as? Int {
                 cell.reviewCountLabel.text = "\(reviewCount) Reviews"
@@ -84,11 +142,9 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
                 cell.categoriesLabel.text = ", ".join(cat)
             }
     
-            if let dist = restraunt["distance"] as? NSString {
-//                println(restraunt["distance"])
-//                let miles = dist.bridgeToObjectiveC().floatValue
-//                let m = miles. * 0.00062137
-//                cell.distanceLabel.text = "\(miles) mi"
+            if let meters = restraunt["distance"]! as? Double {
+                let miles = meters * 0.00062137
+                cell.distanceLabel.text = String(format: "%.2f mi", miles)
             }
             
             let imageUrl = restraunt["image_url"] as NSString
@@ -143,10 +199,10 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         }
     }
     
-    func performSearch(term: NSString) {
+    func performSearch(term: NSString, params: Dictionary<String, String>) {
         client = YelpClient(consumerKey: yelpConsumerKey, consumerSecret: yelpConsumerSecret, accessToken: yelpToken, accessSecret: yelpTokenSecret)
         
-        client.searchWithTerm(term, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+        client.searchWithTerm(term, params: params, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             self.restrauntArray = response["businesses"] as? NSArray
             self.restrauntView.reloadData()
             
@@ -158,7 +214,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchText = searchController.searchBar.text
         if !searchText.isEmpty  && countElements(searchText) > 2 {
-            performSearch(searchText)
+            performSearch(searchText, params: [:])
         }
     }
     

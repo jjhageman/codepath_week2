@@ -8,14 +8,30 @@
 
 import UIKit
 
+protocol FiltersSwitchCellDelegate: class {
+    func filterSwitchCellDidToggle(cell: FiltersTableViewCell, newValue:Bool)
+}
+
 class FiltersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var filterLabel: UILabel!
     @IBOutlet weak var filterSwitch: UISwitch!
     
+    weak var delegate: FiltersSwitchCellDelegate?
+    
+    var filterRowIdentifier: FilterRowId! {
+        didSet {
+            filterLabel?.text = filterRowIdentifier?.rawValue
+        }
+    }
+    
+    @IBAction func didToggleSwitch(sender: AnyObject) {
+        delegate?.filterSwitchCellDidToggle(self, newValue: filterSwitch.on)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .None
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -23,5 +39,4 @@ class FiltersTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

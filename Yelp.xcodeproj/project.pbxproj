@@ -27,6 +27,7 @@
 		3F39B1891A8C0D7A0043DF03 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B17F1A8C0D7A0043DF03 /* Lato-LightItalic.ttf */; };
 		3F39B18A1A8C0D7A0043DF03 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F39B1801A8C0D7A0043DF03 /* Lato-Regular.ttf */; };
 		3F717A0A1A8ECF14005B10B5 /* FiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F717A091A8ECF14005B10B5 /* FiltersTableViewCell.swift */; };
+		3F717A0F1A904B96005B10B5 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F717A0E1A904B96005B10B5 /* Filters.swift */; };
 		3F96A6631A8DCB8C00F88447 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96A6621A8DCB8C00F88447 /* FiltersViewController.swift */; };
 		3FCC72FC1A89DB3700611B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC72FB1A89DB3700611B4D /* AppDelegate.swift */; };
 		3FCC72FE1A89DB3700611B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC72FD1A89DB3700611B4D /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		3F39B17F1A8C0D7A0043DF03 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		3F39B1801A8C0D7A0043DF03 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		3F717A091A8ECF14005B10B5 /* FiltersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersTableViewCell.swift; sourceTree = "<group>"; };
+		3F717A0E1A904B96005B10B5 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		3F96A6621A8DCB8C00F88447 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		3FA45AEC1A89E507005B0674 /* Yelp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yelp-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FCC72F61A89DB3700611B4D /* Yelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,14 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		3F717A0D1A904B76005B10B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F717A0E1A904B96005B10B5 /* Filters.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		3FCC72ED1A89DB3700611B4D = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		3FCC72F81A89DB3700611B4D /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
+				3F717A0D1A904B76005B10B5 /* Models */,
 				3FCC731C1A89E26400611B4D /* API */,
 				3FCC731B1A89E10B00611B4D /* ViewControllers */,
 				3FCC72FB1A89DB3700611B4D /* AppDelegate.swift */,
@@ -389,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F717A0F1A904B96005B10B5 /* Filters.swift in Sources */,
 				3FCC72FE1A89DB3700611B4D /* ViewController.swift in Sources */,
 				3FCC731E1A89E28200611B4D /* YelpClient.swift in Sources */,
 				3F39B1641A8B36400043DF03 /* RestrauntTableViewCell.swift in Sources */,
